@@ -168,3 +168,65 @@
 #     'Paul': 75
 #     }
 # print(d)
+
+
+# 根据如下dict：
+# d = {
+#     'Adam': 95,
+#     'Lisa': 85,
+#     'Bart': 59
+# }
+# 请打印出：
+# Adam: 95
+# Lisa: 85
+# Bart: 59
+# d = {
+#     'Adam': 95,
+#     'Lisa': 85,
+#     'Bart': 59
+# }
+# for (key, value) in d.items():
+#     print("%s: %s" % (key, value))
+
+
+# 请设计一个dict，可以根据分数来查找名字，已知成绩如下：
+# Adam: 95,
+# Lisa: 85,
+# Bart: 59.
+# d = {
+#     95: 'Adam',
+#     85: 'Lisa',
+#     59: 'Bart'
+#     }
+# a=input('c:')
+# print(d[a])
+
+
+# 请根据Paul的成绩 72 更新下面的dict：
+# d = {
+#     95: 'Adam',
+#     85: 'Lisa',
+#     59: 'Bart'
+# }
+# d = {
+#     95: 'Adam',
+#     85: 'Lisa',
+#     59: 'Bart'
+# }
+# d[72]='Paul'
+# print(d)
+
+
+# 请用 for 循环遍历如下的dict，打印出 name: score 来。
+# d = {
+#     'Adam': 95,
+#     'Lisa': 85,
+#     'Bart': 59
+# }
+# d = {
+#     'Adam': 95,
+#     'Lisa': 85,
+#     'Bart': 59
+# }
+# for a in d:
+#     print("%s: %s" % (a, d[a]))
