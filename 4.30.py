@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # 假设班里有3名同学：Adam，Lisa和Bart，他们的成绩分别是 95.5，85 和 59，请按照 名字, 分数, 名字, 分数... 的顺序按照分数从高到低用一个list表示，然后打印出来。
 # l=['Adam','95.5','Lisa','85','Bart','59']
 # print(l)
@@ -60,3 +61,110 @@
 # 由于 t 包含一个list元素，导致tuple的内容是可变的。能否修改上述代码，让tuple内容不可变？
 # t = ('a', 'b', 'A', 'B')
 # print(t)
+
+# 如果成绩达到60分或以上，视为passed。
+# 假设Bart同学的分数是75，请用if语句判断是否能打印出 passed:
+# bart=75
+# if bart > 60:
+#     print('passed')
+
+
+# 如果成绩达到60分或以上，视为passed，否则视为failed。
+# 假设Bart同学的分数是55，请用if语句打印出 passed 或者 failed:
+# bart = 55
+# if bart >60:
+#     print('passed')
+# else:
+#     print('failed')
+
+
+# 如果按照分数划定结果：
+#     90分或以上：excellent
+#     80分或以上：good
+#     60分或以上：passed
+#     60分以下：failed
+# 请编写程序根据分数打印结果。
+# bart = 65
+# if bart >90:
+#     print('excellent')
+# elif bart>80:
+#     print('good')
+# elif bart>60:
+#     print('passed')
+# elif bart<60:
+#     print('failed')
+
+
+# 班里考试后，老师要统计平均成绩，已知4位同学的成绩用list表示如下：
+# L = [75, 92, 59, 68]
+# 请利用for循环计算出平均成绩。
+# L = [75, 92, 59, 68]
+# a=0.0
+# c=0
+# for b in L:
+#     a=a+b
+#     c=c+1
+# print (a/c)
+
+
+# 利用while循环计算100以内奇数的和。
+# sum = 0
+# x = 1
+# while x <= 100:
+#     sum = sum + x
+#     x = x+2
+# print
+
+# 利用 while True 无限循环配合 break 语句，计算 1 + 2 + 4 + 8 + 16 + ... 的前20项的和。
+# sum=0
+# x=1
+# n=1
+# while True:
+#     n=n+1
+#     sum=sum+x
+#     x=x*2
+#     if n > 20 :
+#         break
+# print(sum)
+
+# 对已有的计算 0 - 100 的while循环进行改造，通过增加 continue 语句，使得只计算奇数的和：
+# # sum = 0
+# # x = 1
+# # while True:
+# #     sum = sum + x
+# #     x = x + 1
+# #     if x > 100:
+# #         break
+# # print sum
+# sum = 0
+# x = 0
+# while True:
+#     x = x + 1
+#     if x > 100:
+#         break
+#     if x % 2 == 0:
+#         continue
+#     sum = sum + x
+# print(sum)
+
+
+# 对100以内的两位数，请使用一个两重循环打印出所有十位数数字比个位数数字小的数，例如，23（2 < 3）。
+# for x in [1, 2, 3, 4, 5, 6, 7, 8]:
+#     for y in [2, 3, 4, 5, 6, 7, 8, 9]:
+#         if x < y:
+#             print (x*10+y)
+
+
+# 新来的Paul同学成绩是 75 分，请编写一个dict，把Paul同学的成绩也加进去。
+# d = {
+#     'Adam': 95,
+#     'Lisa': 85,
+#     'Bart': 59
+# }
+# d = {
+#     'Adam': 95,
+#     'Lisa': 85,
+#     'Bart': 59,
+#     'Paul': 75
+#     }
+# print(d)
