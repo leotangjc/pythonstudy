@@ -230,3 +230,27 @@
 # }
 # for a in d:
 #     print("%s: %s" % (a, d[a]))
+
+
+# 请用set表示班里的4位同学：
+# Adam, Lisa, Bart, Paul
+# a = set(['Adam', 'Lisa', 'Bart', 'Paul'])
+# print(a)
+
+
+# 由于上述set不能识别小写的名字，请改进set，使得 'adam' 和 'bart'都能返回True。
+
+
+# 请用 for 循环遍历如下的set，打印出 name: score 来。
+# s = set([('Adam', 95), ('Lisa', 85), ('Bart', 59)])
+# s = set([('Adam', 95), ('Lisa', 85), ('Bart', 59)])
+# for x in s:
+#     print(x)
+
+
+# 针对下面的set，给定一个list，对list中的每一个元素，如果在set中，就将其删除，如果不在set中，就添加进去。
+# s = set(['Adam', 'Lisa', 'Paul'])
+# L = ['Adam', 'Lisa', 'Bart', 'Paul']
+# s = set(['Adam', 'Lisa', 'Paul'])
+# s.add('Bart')
+# print(s)
