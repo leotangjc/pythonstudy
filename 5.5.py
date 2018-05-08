@@ -28,3 +28,15 @@ import t.c7
 print(t.c7.a)
 #引用t目录下的c7模块
 #输出此模块下的a变量
+
+from t import c7
+print(c7.a)
+#从t目录（包）下，访问c7模块
+#输出c7下的a变量
+
+from t.c7 import (a,b,
+c)
+print(a)
+print(b)
+#从t目录（包）下的c7模块，引用所有
+#输出c7下的a、b变量
