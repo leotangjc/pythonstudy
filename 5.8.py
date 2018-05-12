@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # def damage(skill1,skill2):
 #     damage1 = skill1 * 3
 #     damage2 = skill2 *2 +10
@@ -18,3 +19,6 @@
 # print_student_files('小明','男',18,'人民路小学')
 # print_student_files('小红','女')
 # 默认参数就是在定义形式函数的时候，预先赋值
+
+# for key,value in dictname.items():
+# 正确遍历字典的方式
