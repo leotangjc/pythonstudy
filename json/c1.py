@@ -23,7 +23,28 @@ a = 'abc|bac|cba|adc123callbsdiiikkkxy11we1cvb'
 # print(z4)
 
 
-b = 'python|pytho|pythonnxx|pp|xbpythonnnnnnnn'
+# b = 'python|pytho|pythonnxx|pp|xbpythonnnnnnnn'
 
-z5 = re.findall('python*',b)
-print(z5)
+# z5 = re.findall('python*',b)
+# print(z5)
+
+
+
+
+# lanuage = 'PythonC#JavaC#PHPC#'
+# def convert(value):
+#     matched = value.group()
+#     return '!!'+ matched + '!!'
+# r = re.sub('C#', convert, lanuage)
+# print(r)
+
+
+s = 'A8B20C4M5289R4'
+def convert(value):
+    matched = value.group()
+    if int(matched) >= 6:
+        return '9'
+    else:
+        return '0'
+r = re.sub('\d', convert, s)
+print(r)
