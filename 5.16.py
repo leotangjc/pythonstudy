@@ -20,8 +20,28 @@
 # if __name__=='__main__':
 #     test()
 
-class Student(object):
+# class Student(object):
+#     pass
+
+# bart = Student()
+# print(bart)
+
+# class ppap():
+#     pass
+
+# print(type(ppap))
+
+class Animal():
+    def run(self):
+        print('Animal is running...')
+
+class Dog(Animal):
     pass
 
-bart = Student()
-print(bart)
+class Cat(Animal):
+    pass
+
+def run_twice(animal):
+    animal.run()
+    animal.run()
+    
