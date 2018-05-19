@@ -54,24 +54,41 @@
 
 # 这就是动态语言的 “鸭子类型”，它并不要求严格的继承体系，一个对象只要 “看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子。
 
-class Student(object):
-    count = 0
+# class Student(object):
+#     count = 0
 
-    def __init__(self, name):
-        self.name = name
-        Student.count += 1
+#     def __init__(self, name):
+#         self.name = name
+#         Student.count += 1
 
-# 测试:
-if Student.count != 0:
-    print('测试失败!')
-else:
-    bart = Student('Bart')
-    if Student.count != 1:
-        print('测试失败!')
-    else:
-        lisa = Student('Bart')
-        if Student.count != 2:
-            print('测试失败!')
-        else:
-            print('Students:', Student.count)
-            print('测试通过!')
+# # 测试:
+# if Student.count != 0:
+#     print('测试失败!')
+# else:
+#     bart = Student('Bart')
+#     if Student.count != 1:
+#         print('测试失败!')
+#     else:
+#         lisa = Student('Bart')
+#         if Student.count != 2:
+#             print('测试失败!')
+#         else:
+#             print('Students:', Student.count)
+#             print('测试通过!')
+
+# 求绝对值的函数abs
+# print(abs(-100))
+
+# 请利用Python内置的hex()函数把一个整数转换成十六进制表示的字符串：
+# n1 = 255
+# n2 = 1000
+# print(hex(n1))
+# print(hex(n2))
+
+def pf(x,n):
+    while n > 0:
+        n -= 1
+        x *= x
+        
+    return x
+print(pf(3,2))
