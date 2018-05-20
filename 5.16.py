@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-
 # ' a test module '
 
 # __author__ = 'Michael Liao'
@@ -90,7 +89,7 @@
 #     while n > 0:
 #         n -= 1
 #         s *= x
-        
+
 #     return s
 # print(pf(3,2))
 
@@ -119,17 +118,14 @@
 # 对传入参数前附加*符号，可将其变为可变参数，使其变为一个tuple
 
 
-
-#关键字参数
+# 关键字参数
 # def person(name,age,**kw):
 #     return('name:',name,'age:',age,'other:',kw)
 # print(person('leo', 23))
 # print(person('tjc', 21, city='shiyan'))
 
 
-
 # 命名关键字参数
-
 
 
 # 练习
@@ -162,11 +158,32 @@
 #         print('测试成功!')
 
 
-
 # 递归函数
+# def fact(n):
+#     if n == 1:
+#         return 1
+#     return n * fact(n-1)
+# print(fact(5))
 
-def fact(n):
-    if n == 1:
-        return 1
-    return n * fact(n-1)
-print(fact(5))
+
+# 切片
+# a[起始下标:间隔数:终点下标]
+#练习
+# 利用切片操作，实现一个trim()函数，去除字符串首尾的空格，注意不要调用str的strip()方法
+# def trim(a):
+#     lens = len(a)
+#     if a[:1] == ' ':
+#         a = a[1:]
+#         return trim(a)
+#     elif a[-1:] == ' ':
+#         a = a[:lens-1]
+#         return trim(a)
+#     else:
+#         return a
+        
+
+
+
+#迭代
+# 如果给定一个list或tuple，我们可以通过for循环来遍历这个list或tuple，这种遍历我们称为迭代（Iteration）。
+
