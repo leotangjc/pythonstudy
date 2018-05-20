@@ -186,4 +186,15 @@
 
 #迭代
 # 如果给定一个list或tuple，我们可以通过for循环来遍历这个list或tuple，这种遍历我们称为迭代（Iteration）。
+# 默认情况下，dict迭代的是key。 如果要迭代value，可以用for value in d.values()，如果要同时迭代key和value，可以用for k, v in d.items()。
+# Python内置的enumerate函数可以把一个list变成索引-元素对
 
+
+
+#列表生成式
+# 想要生成[1x1, 2x2, 3x3, ..., 10x10]的话，可以使用列表生成式
+print([x * x for x in range(1, 11)])
+# 也可以附加if判断，如筛选出偶数的平方
+print([x * x for x in range(1, 11) if x % 2 == 0])
+也可以实现两层循环
+print([m + n for m in 'ABC' for n in 'XYZ'])
