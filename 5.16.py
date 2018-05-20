@@ -85,10 +85,47 @@
 # print(hex(n1))
 # print(hex(n2))
 
-def pf(x,n):
-    while n > 0:
-        n -= 1
-        x *= x
+# def pf(x,n):
+#     s = 1
+#     while n > 0:
+#         n -= 1
+#         s *= x
         
-    return x
-print(pf(3,2))
+#     return s
+# print(pf(3,2))
+
+
+# 默认参数
+# def power(x,n=2):
+#     s = 1
+#     while n > 0:
+#         n = n - 1
+#         s = s * x
+#     return s
+# print(power(5))
+# print(power(5，3))
+# 在使用这个函数时，如果不设置第二个参数，就会使用默认的‘n=2’，也就是默认输出平方数
+# 必选参数需要在前，默认参数在后
+# 默认参数必须指向不变对象
+
+
+# 可变参数
+# def calc(*numbers):
+#     sum = 0
+#     for n in numbers:
+#         sum = sum + n * n
+#     return sum
+# print(calc(1,2,3,4))
+# 对传入参数前附加*符号，可将其变为可变参数，使其变为一个tuple
+
+
+
+#关键字参数
+def person(name,age,**kw):
+    return('name:',name,'age:',age,'other:',kw)
+print(person('leo', 23))
+print(person('tjc', 21, city='shiyan'))
+
+
+
+# 命名关键字参数
