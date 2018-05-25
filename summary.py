@@ -1,80 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-# ' a test module '
-
-# __author__ = 'Michael Liao'
-
-# import sys
-
-# def test():
-#     args = sys.argv
-#     if len(args)==1:
-#         print('Hello, world!')
-#     elif len(args)==2:
-#         print('Hello, %s!' % args[1])
-#     else:
-#         print('Too many arguments!')
-
-# if __name__=='__main__':
-#     test()
-
-# class Student(object):
-#     pass
-
-# bart = Student()
-# print(bart)
-
-# class ppap():
-#     pass
-
-# print(type(ppap))
-
-# class Animal():
-#     def run(self):
-#         print('Animal is running...')
-
-# class Dog(Animal):
-#     def run(self):
-#         print('Dog is running')
-
-# class Cat(Animal):
-#     def run(self):
-#         print('Cat is running..')
-
-# def run_twice(animal):
-#     animal.run()
-#     animal.run()
-
-# print(run_twice(Dog()))
-# 对于静态语言（例如 Java）来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。
-
-# 对于 Python 这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了
-
-# 这就是动态语言的 “鸭子类型”，它并不要求严格的继承体系，一个对象只要 “看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子。
-
-# class Student(object):
-#     count = 0
-
-#     def __init__(self, name):
-#         self.name = name
-#         Student.count += 1
-
-# # 测试:
-# if Student.count != 0:
-#     print('测试失败!')
-# else:
-#     bart = Student('Bart')
-#     if Student.count != 1:
-#         print('测试失败!')
-#     else:
-#         lisa = Student('Bart')
-#         if Student.count != 2:
-#             print('测试失败!')
-#         else:
-#             print('Students:', Student.count)
-#             print('测试通过!')
-
 # 求绝对值的函数abs
 # print(abs(-100))
 
@@ -226,7 +152,7 @@
 # # print(fib(12))
 # 这就是定义generator的另一种方法。如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个generator
 # def odd():
-#     print('step 1')
+# 	print('step 1')
 #     yield 1
 #     print('step 2')
 #     yield (3)
@@ -239,8 +165,7 @@
 #迭代器
 #可以直接作用于for循环的对象统称为可迭代对象:iterator
 # 使用isinstance()可以判断一个对象是否是可迭代对象iterator
-        # 集合数据类型，和generator(生成器)是可迭代的
-            # 无序的数据不可迭代
+    # 集合数据elixir，和generator(生成器)是可迭代的
 # from collections import Iterable
 # print(isinstance([], Iterable))
 #可以被next()函数调用，并不断返回下一个之的对象成为迭代器：iterator
@@ -257,6 +182,51 @@
 # 函数式编程的一个特点就是，允许把函数本身作为参数传入另一个函数，还允许返回一个函数！
 
 # 高阶函数
+        # 变量可以指向函数
+            # 例如求绝对值的函数abs
+            # 可以将此函数指向变量
+            # a = abs
+            # print(a(-30))
+        # 函数名也是变量
+        	# 函数名就是指向函数的变量
+		# 传入函数
+			# 既然变量可以指向函数，函数的参数能结婚搜变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称为高阶函数
+			# def add(x, y, f):
+			# 	return f(x) + f(y)
+			# print(add(-5, 6, abs))
+
+# map/reduce
+	# map
+		# map()函数接收两个参数，一个是函数，一个是Iterable(迭代器)，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator(迭代器)返回。
+		# def f(x):
+		# 	return x * x
+		# r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+		# print(list(r))
+		# print(r)
+	# reduce
+		# reduce把一个函数作用在一个序列[x1, x2, x3, ...]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算，
+		# 比如序列求和
+		# from functools import reduce
+		# def add(x, y):
+		# 	return x + y
+		# print(reduce(add, [1, 3, 5, 7, 9]))
+# filter()
+	# 内置的filter()函数用来过滤序列
+	# filter()接收一个函数和一个序列。根据返回值是True还是False决定保留还是丢弃该元素
+	# 保留奇数：
+	# def is_odd(n):
+	#     return n % 2 == 1
+	# print(list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15])))
+	# 删除空字符串：
+	# def not_empty(s):
+	#     return s and s.strip()
+	# list(filter(not_empty, ['A', '', 'B', None, 'C', '  ']))
+
+
+		
+
+
+
 
 
 
