@@ -235,3 +235,7 @@
 # o = odd()
 # for x in o:
 #     print(x)
+
+#迭代器
+#可以直接作用于for循环的对象统称为可迭代对象:lterabld
+# 使用isinstance()可以判断一个对象是否是可迭代对象lterable
