@@ -8,7 +8,8 @@ class Spider():
     def __fetch_content(self):
         r = request.urlopen(Spider.url)
         htmls = r.read()
-        print(htmls)
+        htmls = str(htmls,encoding='utf-8')
+        a = 1
 
     def go(self):
         self.__fetch_content()
