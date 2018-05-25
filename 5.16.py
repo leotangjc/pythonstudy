@@ -1,4 +1,4 @@
-647# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 # ' a test module '
@@ -180,7 +180,7 @@
 #         return trim(a)
 #     else:
 #         return a
-        
+
 
 
 
@@ -200,10 +200,38 @@
 # print([m + n for m in 'ABC' for n in 'XYZ'])
 
 
-class s():
-    name = ''
-    age = 0
-    
-    def __init__(self,name,age):
-        name = name 
-        age = age 
+# class s():
+#     name = ''
+#     age = 0
+#     def __init__(self,name,age):
+#         name = name
+#         age = age
+
+
+# 生成器（generator)
+# 把列表生成式的[]改成()，就创建了一个generator：
+# g = (x * x for x in range(10))
+# for n in g:
+#     print(n)
+# 通常我们使用for循环来迭代generator
+# 如斐波拉契数列，出第一个和第二个数歪，任意一个数都可由前两个数相加得到：1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+# def fib(max):
+#     n, a, b = 0, 0, 1
+#     while n < max:
+#         # print(b)
+#         yield b
+#         a, b = b, a + b
+#         n = n + 1
+#     return 'done'
+# # print(fib(12))
+# 这就是定义generator的另一种方法。如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个generator
+# def odd():
+#     print('step 1')
+#     yield 1
+#     print('step 2')
+#     yield (3)
+#     print('step 3')
+#     yield (5)
+# o = odd()
+# for x in o:
+#     print(x)
