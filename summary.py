@@ -221,11 +221,16 @@
 	# def not_empty(s):
 	#     return s and s.strip()
 	# list(filter(not_empty, ['A', '', 'B', None, 'C', '  ']))
-
-
+# sorted
+	# 排序算法
+		# sorted()函数可以直接进行排序：
+			# print(sorted([36, 5, -12, 9, -21]))
+		# 这个高阶函数也可以接受一个key函数来实现自定义的排序
+			# print(sorted([36, 5, -12, 9, -21], key=abs))
+			
 		
-
-
+L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+print(sorted(L,key=value))
 
 
 
