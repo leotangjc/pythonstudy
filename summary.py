@@ -229,8 +229,26 @@
 			# print(sorted([36, 5, -12, 9, -21], key=abs))
 			
 		
-L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
-print(sorted(L,key=value))
+# 返回函数
+	# 函数作为返回值
+		# ps:将函数作为返回值的时候，应该是将函数和需要的参数共同赋予了返回值，需要执行彩灯得到结果。此行为也被称为“闭包”
+	# 闭包
+
+# 匿名函数
+	# lambda
+	# 例：
+	# list(map(lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
+	# 匿名函数只能有一个表达式
+
+
+# 装饰器
+	# decorator
+	# 例：
+	# def log(func):
+	# 	def wrapper(*args, **kw):
+	# 		print('call %s():' % func.__name__)
+	# 		return func(*args, **kw)
+	# 	return wrapper
 
 
 
