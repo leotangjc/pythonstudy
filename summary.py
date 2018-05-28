@@ -245,19 +245,51 @@
 # 装饰器其实就是一个闭包，把一个函数当做参数然后返回一个替代版函数。
 	# decorator
 	# 例：
-def outer(some_func):
-     def inner():
-         print("before some_func")
-         ret = some_func()
-		 
-         return ret + 1
-     return inner
-def foo():
-     return 1
-decorated = outer(foo)
-print(decorated())
+	# def outer(some_func):
+	#     def inner():
+	#         print("before some_func")
+	#         ret = some_func()
+	#         return ret + 1
+	#     return inner
+	# @outer
+	# def foo():
+	#     return 1
+	# print(foo())
+	# # decorated = outer(foo)
+	# # print(decorated())
 
 
+# 模块
+	# 把函数分组，放到不同的文件里，每个文件就是一个模块
+	# 	把一个分类的文件放在一个文件夹里，这个目录就叫包(package)
+	#	每个包目录下都需要有一个__init__.py文件，有这个文件存在，就会被Python识别成一个包，这个文件可以是空文件，也可以有Python代码
+	# 使用import导入模块
 
+
+# 面向对象
+	# 类和实例
+		# 类是抽象的模板
+		# 实例是根据类创建除了的具体的对象，每个生成的对象都拥有相同的方法，但各自的数据可能不同
+		# 由于类可以起到模板的作用，因此，可以在创建实例的时候，把一些我们认为必须绑定的属性强制填写进去。通过定义一个__init__方法，在创建实例的时候，把属性绑定上去
+			# __init__方法的第一个参数永远是self，表示创建的实例本身。因此，在创建实例的时候，必须要传入与__init__方法匹配的参数
+		# 数据封装
+			# 可以通过类内部定义访问数据的函数，这些函数是和类本身关联起来的，这样就把数据封装起来了，称为类的方法
+			# class Student(object):
+			# 	def __init__(self, name, score):
+			# 		self.name = name
+			# 		self.score = score
+			# 	def print_score(self):
+			# 		print('%s: %s' % (self.name, self.score))
+			# bart = Student('Bart Simpson', 59)
+			# print(bart.print_score())
+	#访问限制
+		# 在没有进行访问限制时，从外部是可以直接对内部属性进行修改的，如：
+			# bart.score = 99
+		# 如果想让内部属性不被外部访问，可以把属性的名称前加上两个下划线__，使其变为一个私有变量，只有内部可以访问
+		# 想要让对象允许从外部修改的话，可以增加一个set_score方法，这样做的优点是，可以在这个方法中，可以对参数进行检查，避免传入无效参数
+	# 继承和多态
+		# 当我们定义一个class的时候，可以从现有的class继承，新的class称为子类，被继承的称为基类、父类
+		# 继承的好处就是子类获得了父类的全部功能
+		
 
 
