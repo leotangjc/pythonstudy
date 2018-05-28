@@ -242,13 +242,20 @@
 
 
 # 装饰器
+# 装饰器其实就是一个闭包，把一个函数当做参数然后返回一个替代版函数。
 	# decorator
 	# 例：
-	# def log(func):
-	# 	def wrapper(*args, **kw):
-	# 		print('call %s():' % func.__name__)
-	# 		return func(*args, **kw)
-	# 	return wrapper
+def outer(some_func):
+     def inner():
+         print("before some_func")
+         ret = some_func()
+		 
+         return ret + 1
+     return inner
+def foo():
+     return 1
+decorated = outer(foo)
+print(decorated())
 
 
 
