@@ -302,7 +302,7 @@
 		# 要读取二进制文件的话，需要使用'rb'标示符
 		# 到读取非UTF-8编码的文件，需要给open()函数传输encoding参数，例如GBK编码：f = open('/Users/michael/gbk.txt', 'r', encoding='gbk')
 	# 写文件
-		同样也是使用open()函数，但是使用的标示符是'w'
+		# 同样也是使用open()函数，但是使用的标示符是'w'
 
 
 
