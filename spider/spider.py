@@ -31,17 +31,20 @@ class Spider():
 
     def __refine(self, anchors):
         l = lambda anchor :{
-            'name':anchor['name'][0].strip(),
-            'number':anchor['number'][0]
+            'name': anchor['name'][0].strip(),
+            'number': anchor['number'][0]
             }
         return map(l, anchors)
 
-    def go(self):  #入口方法
+    def go(self):  
+        #入口方法
         htmls = self.__fetch_content()
         anchors = self.__analysis(htmls)
-        anchors = list(self.refine(anchors))
+        anchors = list(self.__refine(anchors))
         self.__refine(anchors)
 
 
-spider = Spider() #实例化
-spider.go() #调用入口方法
+spider = Spider()  
+#实例化
+spider.go()  
+#调用入口方法
