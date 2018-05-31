@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import re
+import re  # 引入正则表达式模块
 
 from urllib import request
 
@@ -25,7 +25,7 @@ class Spider():
             number = re.findall(Spider.number_pattern, html)
             anchor = {'name':name, 'number':number}
             anchors.append(anchor)
-        # print(anchors)
+        print(anchors)
         a = 1
 
     def __refine(self, anchors):
