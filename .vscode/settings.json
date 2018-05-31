@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\leome\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "python.pythonPath": "/usr/local/bin/python3",
     "editor.fontSize": 16,
     "python.linting.pylintEnabled": false,
     "python.formatting.provider": "yapf"

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import re  # 引入正则表达式模块
 
 from urllib import request
@@ -29,11 +30,16 @@ class Spider():
         a = 1
 
     def __refine(self, anchors):
-        l = lambda anchor :{'name':anchor['name'][0].strip()}
+        l = lambda anchor :{
+            'name':anchor['name'][0].strip(),
+            'number':anchor['number'][0]
+            }
+        return map(l, anchors)
 
     def go(self):  #入口方法
         htmls = self.__fetch_content()
         anchors = self.__analysis(htmls)
+        anchors = list(self.refine(anchors))
         self.__refine(anchors)
 
 
