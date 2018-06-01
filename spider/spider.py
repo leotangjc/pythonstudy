@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import re  # 引入正则表达式模块
+import re  
+# 引入正则表达式模块
 
 from urllib import request
 
@@ -11,9 +12,11 @@ class Spider():
     number_pattern = '<span class="video-number">([\s\S]*?</span>)'
     
     def __fetch_content(self):
-        r = request.urlopen(Spider.url) # 使用方法读取指定页面，并将其生成一个对象
+        r = request.urlopen(Spider.url) 
+        # 使用方法读取指定页面，并将其生成一个对象
         htmls = r.read()
-        htmls = str(htmls,encoding='utf-8') #将读取到的网页编码转为utf-8格式
+        htmls = str(htmls,encoding='utf-8') 
+        #将读取到的网页编码转为utf-8格式
         return htmls
         
         
@@ -36,12 +39,25 @@ class Spider():
             }
         return map(l, anchors)
 
+    def __sort(self, anchors):
+        anchors = sorted(anchors, key=self.__sort_seed)
+        return anchors
+    
+    def __sort_seed(self, anchor):
+        return anchor['number']
+
+
+    def __show(self, anchors):
+        for anchor in anchors:
+            print(anchor['name'] + '-----' + anchor['number'])
+
     def go(self):  
         #入口方法
         htmls = self.__fetch_content()
         anchors = self.__analysis(htmls)
         anchors = list(self.__refine(anchors))
-        self.__refine(anchors)
+        anchors = self.__sort(anchors)
+        print(anchors)
 
 
 spider = Spider()  
