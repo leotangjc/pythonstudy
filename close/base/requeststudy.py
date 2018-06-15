@@ -31,7 +31,7 @@ class RunMain:
         res = requests. get(url = url,data = data).json()
         return json.dumps(res,indent=2,sort_keys=True)
 
-    def run_main(url, method):
+    def run_main(url, method, data):
         res = None
         if method == 'GET':
             res = self.send_get(url, data)
