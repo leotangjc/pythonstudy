@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\tangj\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "python.pythonPath": "/usr/local/opt/python/bin/python3.7",
     "editor.fontSize": 16,
     "python.linting.pylintEnabled": true,
     "python.formatting.provider": "yapf"
