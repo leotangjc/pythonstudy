@@ -219,3 +219,50 @@
 # print('转折')
 # print("此人的成绩是：",d.get('thomas',"查无此人,无法查询成绩"))
 
+l = ['ad','Bd','cd']
+L = []
+Nu = input('新用户名：')
+x = 0
+while x < len(l)-1:
+    if Nu.lower() == l[x].lower():
+        pass
+    else:
+        L.append(Nu)
+    x = x + 1
+print(L)
+# ########################
+# for x in l:
+#     L.append(x.lower())
+# # print(L)
+# ######################
+# if Nu.lower() in L:
+#     print('您的用户名已被占用')
+# else:
+#     L.append(Nu)
+# print(L)
+
+
+
+
+
+
+
+
+
+
+# for L in l:
+#     # print(Nu.lower())
+#     # print(L.lower())
+#     # print('分隔符---')
+#     if L.lower() in l:
+#         print('您的用户名已被占用')
+#     else:
+#         l.append(Nu)
+# print(l)
+# print('分隔符-------')
+# Nu = input('新用户名：')
+# for L in l:
+#     if L.lower == Nu.lower:
+#         print('您的用户名已被占用')
+#     else:
+#         l.append(Nu)

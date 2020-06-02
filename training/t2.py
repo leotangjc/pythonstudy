@@ -17,11 +17,37 @@
 # print(power(5,5))
 
 
-def enroll(name, gender, age=6, city='Beijing'):
-    print('name:', name)
-    print('gender:', gender)
-    print('age:', age)
-    print('city:', city)
-print(enroll("leo","b"))
-print("转折")
-print(enroll("leo","b",15))
+# def enroll(name, gender, age=6, city='Beijing'):
+#     print('name:', name)
+#     print('gender:', gender)
+#     print('age:', age)
+#     print('city:', city)
+# print(enroll("leo","b"))
+# print("转折")
+# print(enroll("leo","b",15))
+
+
+# t1s = []
+# for t2 in range(1,11):
+#     t1 = t2**2
+#     t1s.append(t1)
+#     print(t1s)
+
+# t2s = []
+# for t2 in range(1,11):
+#     t2s = t2**3
+#     print(t2s)
+
+    
+# t2s = []
+# x = 0
+# for t2 in range(1,11):
+#     t2s[t2] = t2**3
+#     print(t2s)
+
+x = 0
+t1 = []
+for a in range(1,11):
+    x = a**2
+    t1.append(x)
+    print(t1)
