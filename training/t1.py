@@ -219,17 +219,17 @@
 # print('转折')
 # print("此人的成绩是：",d.get('thomas',"查无此人,无法查询成绩"))
 
-l = ['ad','Bd','cd']
-L = []
-Nu = input('新用户名：')
-x = 0
-while x < len(l)-1:
-    if Nu.lower() == l[x].lower():
-        pass
-    else:
-        L.append(Nu)
-    x = x + 1
-print(L)
+# l = ['ad','Bd','cd']
+# L = []
+# Nu = input('新用户名：')
+# x = 0
+# while x < len(l)-1:
+#     if Nu.lower() == l[x].lower():
+#         pass
+#     else:
+#         L.append(Nu)
+#     x = x + 1
+# print(L)
 # ########################
 # for x in l:
 #     L.append(x.lower())
@@ -266,3 +266,18 @@ print(L)
 #         print('您的用户名已被占用')
 #     else:
 #         l.append(Nu)
+
+
+
+
+
+alien_0 = {'x_position':0, 'y_position':25, 'speed':'fast'}
+print("Original x_position: " + str(alien_0['x_position']))
+if alien_0['speed'] == 'slow':
+    x_increment = 1
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+else:
+    x_increment = 3
+alien_0['x_positon'] = alien_0['x_position'] + x_increment
+print("new x_position: " + str(alien_0['x_position']))
